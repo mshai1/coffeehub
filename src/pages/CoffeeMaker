@@ -1,0 +1,18 @@
+// CoffeeMaker.js
+import React from 'react';
+
+const CoffeeMaker = ({ resources }) => {
+  return (
+    <div>
+      <h2>Coffee Maker</h2>
+      <p>Resources:</p>
+      <ul>
+        {Object.keys(resources).map(resource => (
+          <li key={resource}>{resource}: {resources[resource]}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default CoffeeMaker;
