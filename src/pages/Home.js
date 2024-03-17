@@ -1,4 +1,5 @@
 import React from 'react';
+import header from './header';
 
 export default function Home() {
   return (

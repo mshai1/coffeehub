@@ -55,7 +55,7 @@ const styles = {
   },
   coffeeCard: {
     backgroundColor: '#f5f5f5',
-    padding: '20px',
+    padding: '60px',
     borderRadius: '8px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
   },
