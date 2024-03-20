@@ -1,81 +1,9 @@
 import React, { useState } from 'react';
-import Header from './header';
 import latteImage from '../assets/latte.png';
 import espressoImage from '../assets/espresso.png';
 import cappuccinoImage from '../assets/cappuccino.jpeg';
-
-// Styles
-const styles = {
-  container: {
-    //background: 'linear-gradient(to right, #ffffff, #f0f8ff)',
-   // display: 'flex',
-    //justifyContent: 'center',
-    padding: '20px',
-  },
-  content: {
-    backgroundColor: '#f9f9f9',
-    borderRadius: '10px',
-    textAlign: 'center',
-    maxWidth: '100%',
-    padding: '20px',
-    position: 'relative',
-  },
-  coffeeCardContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: '20px',
-  },
-  coffeeCard: {
-    width: '200px',
-    height: '200px',
-    position: 'relative',
-    backgroundSize: 'cover',
-    marginBottom: '20px',
-    cursor: 'pointer',
-    borderRadius: '10px',
-    transition: 'border 0.3s ease-in-out',
-  },
-  coffeeName: {
-    position: 'absolute',
-    bottom: '10px',
-    left: '10px',
-    fontSize: '16px',
-    color: '#fff',
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    padding: '5px',
-    borderRadius: '5px',
-  },
-  button: {
-    margin: '20px 10px',
-    padding: '10px 20px',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    backgroundColor: '#3498db',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease-in-out',
-  },
-  buttonHover: {
-    backgroundColor: '#2980b9',
-  },
-  report: {
-    display: 'block',
-  },
-  selfDestructMessage: {
-    position: 'absolute',
-    top: '10px',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    backgroundColor: '#2ecc71',
-    color: '#fff',
-    padding: '10px',
-    borderRadius: '5px',
-    zIndex: '1',
-    transition: 'opacity 0.5s ease-in-out',
-  },
-};
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './MakeCoffee.css'; // Import custom CSS file
 
 // Coffee options
 const coffeeOptions = [
@@ -136,45 +64,43 @@ const MakeCoffee = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <Header />
-      <div style={styles.content}>
-        <h1 style={{ fontSize: '2rem', marginBottom: '20px' }}>Make Coffee</h1>
+    <div className="container">
+      <div className="card mt-5 p-4">
+        <h1 className="text-center">Make Coffee</h1>
         {selfDestructMessage && (
-          <div style={styles.selfDestructMessage}>
-            {selfDestructMessage}
-          </div>
+          <div className="alert alert-success">{selfDestructMessage}</div>
         )}
-        <div style={styles.coffeeCardContainer}>
+        <div className="row justify-content-center">
           {coffeeOptions.map((option, index) => (
-            <div
-              key={index}
-              style={{
-                ...styles.coffeeCard,
-                backgroundImage: `url(${option.image})`,
-                border: selectedCoffee === index ? '2px solid #3498db' : '2px solid transparent',
-              }}
-              onClick={() => setSelectedCoffee(index)}
-            >
-              <p style={styles.coffeeName}>{option.name}</p>
+            <div key={index} className="col-md-4 mb-4">
+              <div
+                className={`card text-center ${selectedCoffee === index ? 'border-primary' : ''}`}
+                style={{ cursor: 'pointer' }}
+                onClick={() => setSelectedCoffee(index)}
+              >
+                <img src={option.image} className="card-img-top" alt={option.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{option.name}</h5>
+                </div>
+              </div>
             </div>
           ))}
         </div>
         <button
           onClick={() => handlePayment(selectedCoffee)}
-          style={styles.button}
+          className="btn btn-custom mr-2" // Custom button class
           disabled={selectedCoffee === null}
         >
           Pay
         </button>
-        <button onClick={handleReport} style={styles.button}>
+        <button onClick={handleReport} className="btn btn-custom mr-2">
           Report
         </button>
-        <button onClick={handleReset} style={styles.button}>
+        <button onClick={handleReset} className="btn btn-custom"> 
           Reset
         </button>
         {showReport && (
-          <div style={styles.report}>
+          <div className="mt-3">
             <h3>Sales Report</h3>
             <p>Coffee Types Sold: {salesReport.join(', ')}</p>
             <p>Total Coffee Sold: {salesReport.length}</p>
