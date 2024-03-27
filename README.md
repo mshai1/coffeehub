@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# CoffeeHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to CoffeeHub! This project is a solo endeavor aimed at gaining experience with React and Bootstrap. 
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+CoffeeHub is a React-based web application designed to simulate a coffee-making experience. It currently consists of three main web pages:
 
-### `npm start`
+1. **Home**: The landing page of the application.
+2. **OfferedCoffee**: Displays the types of coffee offered.
+3. **MakeCoffee**: Allows users to make coffee.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Functionality
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In the **MakeCoffee** page, users can interact with a virtual coffee-making machine. The machine starts with default quantities of coffee, milk, and water. When a user makes a coffee, these quantities decrease accordingly, and the user earns money. However, after a certain number of coffees, the stock runs out, requiring the user to reset the machine. Clicking the reset button restores the default quantities of milk, coffee, and water, along with resetting the earned money.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React: The project is built using the React library, enabling dynamic and efficient user interfaces.
+- Bootstrap: Bootstrap is utilized for the design and layout of the web pages, providing a responsive and visually appealing experience.
 
-### `npm run build`
+## Project Status
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is currently a work in progress. Future updates may include additional features, improvements to existing functionality, and enhancements to the user interface.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the project locally:
 
-### `npm run eject`
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies by running `npm install`.
+4. Start the development server with `npm start`.
+5. Open your web browser and visit `http://localhost:3000` to view the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Feedback
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feedback and suggestions for improvement are always welcome! If you have any ideas or encounter any issues while using CoffeeHub, please feel free to open an issue or submit a pull request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Author
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project was created and maintained by Mohammad Shaikh.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for your interest in CoffeeHub! Enjoy your virtual coffee-making experience! ☕️🚀
