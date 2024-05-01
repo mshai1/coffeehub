@@ -1,6 +1,6 @@
 # CoffeeHub
 
-Welcome to CoffeeHub! This project is a solo endeavor aimed at gaining experience with React and Bootstrap. 
+Welcome to CoffeeHub! This project is a solo endeavor aimed at gaining experience with React and Bootstrap. CoffeeHub has been designed not only to serve as a platform for honing my React and Bootstrap skills but also to serve a greater purpose. It's an initiative aimed at aiding future software engineers in understanding accessibility principles. By developing CoffeeHub, I aimed to showcase my independent learning journey while contributing to a team goal of educating software engineering students about designing for accessibility, particularly for screen readers. The idea of integrating sound feedback within CoffeeHub stands as an excellent example of this commitment to accessibility.
 
 ## Overview
 
